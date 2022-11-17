@@ -18,7 +18,7 @@
   -->
   <owl:Ontology rdf:about="">
     <!-- <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/> -->
-    <owl:imports rdf:resource="geosparql.owl"/>
+    <owl:imports rdf:resource="https://csse-uoft.github.io/ontologies/geosparql.owl"/>
   </owl:Ontology>
   <owl:Class rdf:ID="Triangle">
     <rdfs:isDefinedBy rdf:resource=""/>

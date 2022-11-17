@@ -21,11 +21,11 @@
     >OGC GeoSPARQL – A Geographic Query Language for RDF Data OGC 11-052r5</dc:source>
     <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2012-04-30</dc:date>
-    <owl:imports rdf:resource="gml.owl"/>
+    <owl:imports rdf:resource="https://csse-uoft.github.io/ontologies/gml.owl"/>
     <!-- <owl:imports rdf:resource="http://www.opengis.net/ont/gml"/> -->
     <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >OGC GeoSPARQL 1.0</owl:versionInfo>
-    <owl:imports rdf:resource="sf.owl"/>
+    <owl:imports rdf:resource="https://csse-uoft.github.io/ontologies/sf.owl"/>
     <!-- <owl:imports rdf:resource="http://www.opengis.net/ont/sf"/> -->
     <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >An RDF/OWL vocabulary for representing spatial information</dc:description>
