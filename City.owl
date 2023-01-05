@@ -30,7 +30,7 @@
     <owl:Ontology rdf:about="http://ontology.eil.utoronto.ca/5087/2/City/">
         <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Mereology.owl"/>
         <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/1/SpatialLoc.owl"/>
-        <owl:imports rdf:resource="Bylaw.owl"/>
+        <owl:imports rdf:resource="https://csse-uoft.github.io/ontologies/Bylaw.owl"/>
         <!-- <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/2/Bylaw.owl"/> -->
         <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/2/CityService.owl"/>
         <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/2/LandUse.owl"/>
