@@ -8,4 +8,4 @@
 | cwrc                | http://sparql.cwrc.ca/ontologies/cwrc# | https://csse-uoft.github.io/ontologies/cwrc.owl              |                                                                                                  |
 | schema (2022-10-25) | https://schema.org/                    | https://csse-uoft.github.io/ontologies/schema-2022-10-25.owl |                                                                                                  |
 | foaf                | http://xmlns.com/foaf/0.1/             | https://csse-uoft.github.io/ontologies/foaf.owl              | `foaf:isPrimaryTopicOf` is set to an Object Property to solve compatibility issue with owlready2 |
-| dct                 | http://purl.org/dc/terms/              | https://csse-uoft.github.io/ontologies/dct.owl               | cannot download directly from owlready2 due to potential websites protection                     |
+| dct version 2       | http://purl.org/dc/terms/              | https://csse-uoft.github.io/ontologies/dct.owl               | cannot download directly from owlready2 due to potential websites protection                     |
