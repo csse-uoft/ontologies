@@ -9,3 +9,4 @@
 | schema (2022-10-25) | https://schema.org/                    | https://csse-uoft.github.io/ontologies/schema-2022-10-25.owl |                                                                                                  |
 | foaf                | http://xmlns.com/foaf/0.1/             | https://csse-uoft.github.io/ontologies/foaf.rdf              | `foaf:isPrimaryTopicOf` is set to an Object Property to solve compatibility issue with owlready2 |
 | dct version 2       | http://purl.org/dc/terms/              | https://csse-uoft.github.io/ontologies/dct.rdf               | cannot download directly from owlready2 due to potential websites protection                     |
+| rdfs                | http://www.w3.org/2000/01/rdf-schema#  | https://csse-uoft.github.io/ontologies/rdfs.owl              | resaved from Protege to fix compatibility issue with owlready2                                   |
