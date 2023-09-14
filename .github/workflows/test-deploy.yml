@@ -21,7 +21,7 @@ jobs:
       run: pip3 install git+https://github.com/csse-uoft/owlready2.git
     
     - name: Test ontologies
-      run: python -m src.main
+      run: python tests/test.py
       
     - name: Deploy Ontologies to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
