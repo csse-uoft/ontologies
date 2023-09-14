@@ -1,0 +1,30 @@
+name: Test and Deploy
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-frontend:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.9
+          architecture: x64
+
+    - name: Install owlready2
+        run: pip3 install git+https://github.com/csse-uoft/owlready2.git
+    
+    - name: Test ontologies
+        run: python -m src.main
+      
+    - name: Deploy Ontologies to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./ontologies

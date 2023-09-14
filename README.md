@@ -11,3 +11,4 @@
 | dct version 2       | http://purl.org/dc/terms/              | https://csse-uoft.github.io/ontologies/dct.rdf               | cannot download directly from owlready2 due to potential websites protection                     |
 | rdfs                | http://www.w3.org/2000/01/rdf-schema#  | https://csse-uoft.github.io/ontologies/rdfs.owl              | resaved from Protege to fix compatibility issue with owlready2                                   |
 | void                | http://rdfs.org/ns/void#               | https://csse-uoft.github.io/ontologies/void.rdf              | Dowloaded to ensure persistent access                                                            |
+| iso639-1            | http://id.loc.gov/vocabulary/iso639-1/ | https://csse-uoft.github.io/ontologies/iso639-1.rdf          | Dowloaded to ensure persistent access                                                            |
