@@ -1,5 +1,5 @@
-## iana Media Types
-iana Media Types in `dct:MediaType` 
+## IANA Media Types
+IANA Media Types in `dct:MediaType` 
 
 Source: https://www.iana.org/assignments/media-types/media-types.xhtml
 
