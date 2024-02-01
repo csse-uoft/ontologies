@@ -7,6 +7,8 @@ Source: https://www.iana.org/assignments/media-types/media-types.xhtml
 Column `Name` -> `dct:title`<br>
 Column `Template` -> URI, if the template is empty, generate the URI from the registry name and the media type `Name`
 
+### [Download](https://csse-uoft.github.io/ontologies/iana-media-types.owl)
+
 ### Example
 
 ```xml
