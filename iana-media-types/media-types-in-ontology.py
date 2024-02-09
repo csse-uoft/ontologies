@@ -1,8 +1,15 @@
-from owlready2 import *
+from owlready2 import rdfs, default_world
 import requests
 import csv
 import os
+import json
 from datetime import date
+
+# Load mine-type to file extension mapping
+# https://gist.github.com/pedropalhari/ad81feb4d49a3622dfd26e2d4d038140
+with open(os.path.join(os.path.dirname(__file__), 'mime-types-to-file-extension.json')) as json_file:
+    mine_type2file_exts = json.load(json_file)
+
 
 # Taken from https://www.iana.org/assignments/media-types/media-types.xhtml
 iana_uri_prefix = "https://www.iana.org/assignments/media-types/"
@@ -32,7 +39,7 @@ def download_and_load_csv(registry_name: str, url: str):
         
 
 dct_onto = default_world.get_ontology(location="https://csse-uoft.github.io/ontologies/dct.rdf", base_iri="http://purl.org/dc/terms/").load()
-onto = get_ontology(iana_uri_prefix)
+onto = default_world.get_ontology(iana_uri_prefix)
 dct_onto.title[onto.metadata] = ['IANA Media Types']
 dct_onto.modified[onto.metadata] = [date.today().strftime("%B %d, %Y")]
 
@@ -45,6 +52,12 @@ with onto:
             else:
                 media_type = dct_onto.MediaType(iri=uri)
                 dct_onto.title[media_type] = [name]
+                if mine_type2file_exts.get(f'{registry_name}/{name}'):
+                    # use ext[1:] to remove the dot
+                    file_extensions = [ext[:] for ext in mine_type2file_exts.get(f'{registry_name}/{name}')]
+                    rdfs.label[media_type] = [f"{', '.join(file_extensions)} - {registry_name}/{name}"]
+                else:
+                    rdfs.label[media_type] = [f"{registry_name}/{name}"]
         
     
     # Save to onotolgies/iana-media-types.owl
